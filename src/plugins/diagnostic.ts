@@ -71,6 +71,22 @@ export class Diagnostic {
    */
   @Cordova()
   static isCameraAuthorized(): Promise<any> { return; }
+
+  /**
+   * Returns the camera authorization status for the application.
+   * Note for Android: this is intended for Android 6 / API 23 and above. Calling on Android 5 / API 22 and below will always return GRANTED status as permissions are already granted at installation time.	 
+   */
+  @Cordova()
+  static getCameraAuthorizationStatus(): Promise<any> { return; }
+
+  /**
+   * Requests authorisation for runtime permissions to use the camera.
+	 * Note for Android: this is intended for Android 6 / API 23 and above. Calling on Android 5 / API 22 and below will have no effect as the permissions are already granted at installation time.
+   * Note for iOS: thould only be called if authorization status is 'not_determined'. Calling it when in any other state will have no effect.	 
+	 */
+  @Cordova()
+  static requestCameraAuthorization(): Promise<any> { return; }
+  
   /**
    * Checks if location mode is set to return high-accuracy locations from GPS hardware.
    *   Returns true if Location mode is enabled and is set to either:
