@@ -82,7 +82,7 @@ export class Diagnostic {
   /**
    * Requests authorisation for runtime permissions to use the camera.
 	 * Note for Android: this is intended for Android 6 / API 23 and above. Calling on Android 5 / API 22 and below will have no effect as the permissions are already granted at installation time.
-   * Note for iOS: thould only be called if authorization status is NOT_REQUESTED. Calling it when in any other state will have no effect.	 
+   * Note for iOS: thould only be called if authorization status is 'not_determined'. Calling it when in any other state will have no effect.	 
 	 */
   @Cordova()
   static requestCameraAuthorization(): Promise<any> { return; }
